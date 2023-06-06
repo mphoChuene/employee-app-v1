@@ -7,6 +7,7 @@ const Navbar = () => {
       <nav className="navbar navbar-dark bg-dark navbar-expand-sm">
         <div className="container">
           <Link to={"/"} className="navbar-brand">
+            <i className="fa fa-user"></i>
             Employee Registration
           </Link>
         </div>
