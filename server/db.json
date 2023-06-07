@@ -1,0 +1,31 @@
+{
+  "employee": [
+    {
+      "name": "Mpho",
+      "id": "0123689954065",
+      "photo Url": "https://th.bing.com/th/id/R.e87ab0a15b2b65662020e614f7e05ef1?rik=u%2fLxcTxmswz41A&pid=ImgRaw&r=0",
+      "Phone": "0659345864",
+      "Email": "mphochuene@gmail.com",
+      "company": "Mlab",
+      "position": "software developer trainne"
+    },
+    {
+      "name": "Lethabo",
+      "id": "0159689955065",
+      "photo Url": "https://th.bing.com/th/id/R.e87ab0a15b2b65662020e614f7e05ef1?rik=u%2fLxcTxmswz41A&pid=ImgRaw&r=0",
+      "Phone": "0659346000",
+      "Email": "Lethabo@gmail.com",
+      "company": "Mlab",
+      "position": "software developer trainne"
+    },
+    {
+      "name": "Ben",
+      "id": "0159689958084",
+      "photo Url": "https://th.bing.com/th/id/R.e87ab0a15b2b65662020e614f7e05ef1?rik=u%2fLxcTxmswz41A&pid=ImgRaw&r=0",
+      "Phone": "0659346432",
+      "Email": "Ben10@gmail.com",
+      "company": "Mlab",
+      "position": "software developer trainne"
+    }
+  ]
+}
