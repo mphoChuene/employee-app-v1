@@ -16,7 +16,7 @@ const App = () => {
         <Route path={"/contacts/list"} element={<ContactList />} />
         <Route path={"/contacts/add"} element={<Addcontact />} />
         <Route path={"/contacts/view/:contactId"} element={<ViewContact />} />
-        <Route path={"/contacts/view/:contactId"} element={<EditContact />} />
+        <Route path={"/contacts/edit/:contactId"} element={<EditContact />} />
       </Routes>
     </>
   );
