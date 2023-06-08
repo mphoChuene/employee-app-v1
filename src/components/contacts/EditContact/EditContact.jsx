@@ -10,7 +10,7 @@ const EditContact = () => {
             <div className="col">
               <p className="h4 text-light fw-bold">Edit Contact</p>
             </div>
-            <div className="row align-items-center">
+            <div className="row">
               <div className="col-md-4">
                 <form>
                   <div className="mb-2">
@@ -68,11 +68,7 @@ const EditContact = () => {
                 </form>
               </div>
               <div className="col-md-6">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIn-gE6j6sjvg0ekFgFBIzVP5VdN3aBu9dLg&usqp=CAU"
-                  alt=""
-                  className="contact-img"
-                />
+                <img src="" alt="" />
               </div>
             </div>
           </div>

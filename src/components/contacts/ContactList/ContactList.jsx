@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../../App.css";
+import { ContactService } from "../../../services/ContactServices";
 
 const ContactList = () => {
+  let [state, setState] = useState({
+    loading: false,
+    contacts: [],
+    errorMessage: "",
+  });
+
+  useEffect(async () => {
+    try {
+      let response = await ContactService.getAllContacts();
+      console.log(response.data);
+    } catch (error) {}
+  }, []);
+
   return (
     <>
       <section className="contact-search p-3">
