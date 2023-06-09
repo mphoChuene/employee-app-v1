@@ -1,7 +1,37 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { ContactService } from "../../../services/ContactServices";
 
 const ViewContact = () => {
+  let { contactId } = useParams();
+
+  let [state, setState] = useState({
+    loading: false,
+    contact: {},
+    errorMessage: "",
+  });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        let response = await ContactService.getContact(contactId);
+        setState({
+          loading: false,
+          contact: response.data,
+          errorMessage: "",
+        });
+      } catch (error) {
+        setState({
+          loading: false,
+          contact: {},
+          errorMessage: "Failed to fetch contact.",
+        });
+      }
+    };
+
+    fetchData();
+  }, [contactId]);
+
   return (
     <>
       <section className="view-contact-intro p-3">

@@ -39,7 +39,6 @@ const ContactList = () => {
 
   return (
     <>
-      <pre>{JSON.stringify(contacts)}</pre>
       <section className="contact-search p-3">
         <div className="container">
           <div className="grid">
@@ -90,13 +89,13 @@ const ContactList = () => {
                 {contacts.length > 0 &&
                   contacts.map((contact) => {
                     return (
-                      <div className="col-md-6">
-                        <div className="card">
+                      <div className="col-md-6" key={contact.id}>
+                        <div className="card my-2">
                           <div className="card-body">
                             <div className="row align-item-center d-flex justify-content-around">
                               <div className="col-md-4">
                                 <img
-                                  src="https://th.bing.com/th/id/R.e87ab0a15b2b65662020e614f7e05ef1?rik=u%2fLxcTxmswz41A&pid=ImgRaw&r=0"
+                                  src={contact.photo}
                                   className="img-fluid contact-img"
                                   alt=""
                                 />
@@ -105,33 +104,39 @@ const ContactList = () => {
                                 <ul className="list-group">
                                   <li className="list-group-item list-group-item-action">
                                     Name :{" "}
-                                    <span className="fw-bold">Mpho Chuene</span>
+                                    <span className="fw-bold">
+                                      {contact.name}
+                                    </span>
                                   </li>
                                   <li className="list-group-item list-group-item-action">
                                     Phone :{" "}
-                                    <span className="fw-bold">0765432672</span>
+                                    <span className="fw-bold">
+                                      {contact.Phone}
+                                    </span>
                                   </li>
                                   <li className="list-group-item list-group-item-action">
                                     Email :
                                     <span className="fw-bold">
-                                      Mpho@gmail.com
+                                      {contact.Email}
                                     </span>
                                   </li>
                                   <li className="list-group-item list-group-item-action">
                                     Position :
                                     <span className="fw-bold">
-                                      software developer
+                                      {contact.position}
                                     </span>
                                   </li>
                                   <li className="list-group-item list-group-item-action">
                                     ID :{" "}
-                                    <span className="fw-bold">123456789</span>
+                                    <span className="fw-bold">
+                                      {contact.id}
+                                    </span>
                                   </li>
                                 </ul>
                               </div>
                               <div className="col-md-1 d-flex flex-column align-items-center">
                                 <Link
-                                  to={"/contacts/view/:contactId"}
+                                  to={`/contacts/view/${contact.id}`}
                                   className="btn btn-warning my-1"
                                 >
                                   <i className="fa fa-eye"></i>
