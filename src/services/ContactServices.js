@@ -9,7 +9,12 @@ export class ContactService {
   }
 
   static getContact(contactId) {
-    let dataURL = `${this.serverURL}/contacts/${contactId}`;
+    let dataURL = `${this.serverURL}/employees/${contactId}`;
     return axios.get(dataURL);
+  }
+
+  static createContact(contact) {
+    let dataURL = `${this.serverURL}/employees`;
+    return axios.post(dataURL, contact);
   }
 }
