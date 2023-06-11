@@ -142,12 +142,15 @@ const ContactList = () => {
                                   <i className="fa fa-eye"></i>
                                 </Link>
                                 <Link
-                                  to={"/contacts/edit/:contactId"}
+                                  to={`/contacts/edit/${contact.id}`}
                                   className="btn btn-primary my-1"
                                 >
                                   <i className="fa fa-pen"></i>
                                 </Link>
-                                <button className="btn btn-danger my-1">
+                                <button
+                                  className="btn btn-danger my-1"
+                                  onClick={() => clickDelete(contact.id)}
+                                >
                                   <i className="fa fa-trash"></i>
                                 </button>
                               </div>
