@@ -17,14 +17,14 @@ const ContactList = () => {
         setState((prevState) => ({ ...prevState, loading: true }));
         const response = await ContactService.getAllContacts();
         console.log(response);
-        setState((prevState) => ({
-          ...prevState,
+        setState((State) => ({
+          ...State,
           loading: false,
           contacts: response.data,
         }));
       } catch (error) {
-        setState((prevState) => ({
-          ...prevState,
+        setState((State) => ({
+          ...State,
           loading: false,
           errorMessage: error.message,
         }));
@@ -34,6 +34,27 @@ const ContactList = () => {
   }, []);
 
   console.log(state);
+
+  const clickDelete = async (contactId) => {
+    try {
+      let response = await ContactService.deleteContact(contactId);
+      if (response) {
+        setState({ ...state, loading: true });
+        let response = await ContactService.getAllContacts();
+        setState({
+          ...state,
+          loading: false,
+          contacts: response.data,
+        });
+      }
+    } catch (error) {
+      setState((State) => ({
+        ...State,
+        loading: false,
+        errorMessage: error.message,
+      }));
+    }
+  };
 
   const { loading, contacts, errorMessage } = state;
 
