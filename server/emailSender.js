@@ -9,7 +9,7 @@ async function sendEmail(recipientEmail) {
       service: "Gmail",
       auth: {
         user: "mphochuene42@gmail.com", // Replace with your Gmail email
-        pass: "nsfgxijrwbaegfnb", // Replace with your Gmail password or app-specific password
+        pass: "passwordplaceholder", // Replace with your Gmail password or app-specific password
       },
     });
 
